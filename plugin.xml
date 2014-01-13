@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="com.jonathan.plugins.ofatls"
+    version="1.1.0">
+    
+    <name>FirstPlugin</name>
+    <description>Read ATLS Events</description>
+    <license>MIT</license>
+    
+    <engines>
+        <engine name="cordova" version=">=3.3.0" />
+    </engines>
+ 
+    <!-- ios -->
+    <platform name="ios">
+        <!-- Cordova >= 2.8 -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="OFATLSPlugin">
+                <param name="ios-package" value="OFATLSPlugin" />
+            </feature>
+        </config-file>
+        
+        
+        <header-file src="OFATLSPlugin.h" />
+        <source-file src="OFATLSPlugin.m" />
+
+        
+        <framework src="libiconv.dylib" />
+        <framework src="AVFoundation.framework" />
+        <framework src="CoreBluetooth.framework" />
+        <framework src="AssetsLibrary.framework" />
+        <framework src="CoreVideo.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="CoreLocation.framework" />
+        <framework src="CoreGraphics.framework" />
+        <framework src="MobileCoreServices.framework" />
+        <framework src="ATLSClient.framework" custome="true" />
+    </platform>
+</plugin>
