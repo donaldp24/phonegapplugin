@@ -1,0 +1,4 @@
+phonegapplugin
+==============
+
+Phonegap plugin
